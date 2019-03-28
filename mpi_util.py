@@ -57,6 +57,7 @@ def guess_available_gpus(n_gpus=None):
 
 
 def setup_mpi_gpus():
+    return
     """
     Set CUDA_VISIBLE_DEVICES using MPI.
     """
