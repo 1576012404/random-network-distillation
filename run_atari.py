@@ -83,7 +83,8 @@ def train(*, env_id, num_env, hps, num_timesteps, seed):
 
 
 def add_env_params(parser):
-    parser.add_argument('--env', help='environment ID', default='MontezumaRevengeNoFrameskip-v4')
+    # parser.add_argument('--env', help='environment ID', default='MontezumaRevengeNoFrameskip-v4')
+    parser.add_argument('--env', help='environment ID', default='PongNoFrameskip-v4')
     parser.add_argument('--seed', help='RNG seed', type=int, default=0)
     parser.add_argument('--max_episode_steps', type=int, default=4500)
 
@@ -93,7 +94,7 @@ def main():
     add_env_params(parser)
     parser.add_argument('--num-timesteps', type=int, default=int(1e12))
     parser.add_argument('--num_env', type=int, default=32)
-    parser.add_argument('--use_news', type=int, default=0)
+    parser.add_argument('--use_news', type=int, default=1)
     parser.add_argument('--gamma', type=float, default=0.99)
     parser.add_argument('--gamma_ext', type=float, default=0.99)
     parser.add_argument('--lam', type=float, default=0.95)
